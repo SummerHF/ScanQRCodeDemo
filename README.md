@@ -1,20 +1,19 @@
 ![ always trust your self ](http://upload-images.jianshu.io/upload_images/1622863-5f0a2b4905864532.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
------------------------------------
+
 
 # MyZone 
 * [My blog](http://summerhf.github.io/)
-* [My github url](https://github.com/SummerHF)
 * [My csdn url ](http://blog.csdn.net/zhuhaifei391565521)
 
------------------------------------
+
 ##  先看效果图
 
 ![效果演示](http://upload-images.jianshu.io/upload_images/1622863-6dee7855a8ac27e7.gif?imageMogr2/auto-orient/strip)
 
 > 录制gif好蛋疼,不是很流畅,扫描区域的动画效果(由小变大)没有体现出来.有兴趣的可以研究下源码.😢😢😢😢
 
------------------------------------
+
 
 ## notice
 
@@ -314,7 +313,7 @@
 ```
 > 很详细,此处就不再赘述了.详情见代码
 
------------------------------------
+
 ##notice
 >1.以上代码仅供参考,如果有任何你觉得不对的地方，都可以联系我,我会第一时间回复，谢谢.
 >qq:`391565521`  email:`zhuhaifei_ios@163.com`

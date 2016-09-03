@@ -1,0 +1,104 @@
+//
+//  PrefixHeader.pch
+//  ScanQRCodeDemo
+//
+//  Created by macbookair on 9/3/16.
+//  Copyright © 2016 macbookair. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#import "SoundManager.h"
+#import "PermissionManager.h"
+
+#pragma mark - 分类宏
+/*************************分类宏****************************/
+
+
+#import "UILabel+Category.h"
+#import "UIView+Extension.h"
+
+/*************************字体相关****************************/
+
+#pragma mark - 字体相关
+
+#define Default_Font_Size_Large 19
+#define Default_Font_Size 16
+
+#define Default_Font_Small_Size 14
+
+#define UIFONT(a)  [UIFont systemFontOfSize:a]
+/*************************颜色宏****************************/
+
+#pragma mark - 颜色宏
+
+// 设置RGB颜色
+#define RGBA(r,g,b,a) [UIColor colorWithRed:r/255.0f green:g/255.0f blue:b/255.0f alpha:a]
+
+
+#define RGB(r,g,b) RGBA(r,g,b,1.0f)
+
+//背景色
+#define BACKGROUND_COLOR [UIColor colorWithRed:242.0/255.0 green:236.0/255.0 blue:231.0/255.0 alpha:1.0]
+
+//清除背景色
+#define CLEARCOLOR [UIColor clearColor]
+
+
+//白色
+#define WHITECOLOR [UIColor whiteColor]
+
+//绿色
+
+#define GREENCOLOR [UIColor greenColor]
+
+//红色
+#define REDCOLOR [UIColor redColor]
+
+
+//黑色
+#define BLACKCOLOR [UIColor blackColor]
+
+
+//灰色
+
+#define GRAYCOLOR   [UIColor grayColor]
+
+//亮灰色
+
+#define LIGHTGRAYCOLOR [UIColor lightGrayColor]
+
+//橙色
+#define ORANGECOLOR [UIColor orangeColor]
+
+//GCD - 在Main线程上运行
+#define kDISPATCH_MAIN_THREAD(mainQueueBlock) dispatch_async(dispatch_get_main_queue(), mainQueueBlock);
+
+/*************************循环引用相关****************************/
+
+#pragma mark - 循环引用相关
+
+#define weakify( x ) \
+_Pragma("clang diagnostic push") \
+_Pragma("clang diagnostic ignored \"-Wshadow\"") \
+autoreleasepool{} __weak __typeof__(x) __weak_##x##__ = x; \
+_Pragma("clang diagnostic pop")
+
+#define strongify( x ) \
+_Pragma("clang diagnostic push") \
+_Pragma("clang diagnostic ignored \"-Wshadow\"") \
+try{} @finally{} __typeof__(x) x = __weak_##x##__; \
+_Pragma("clang diagnostic pop")
+
+//主窗口
+
+#define KEY_WINDOW [UIApplication sharedApplication].windows.lastObject
+
+//系统版本
+#define IS_IOS_VERSION   floorf([[UIDevice currentDevice].systemVersion floatValue])
+
+#endif /* PrefixHeader_pch */
